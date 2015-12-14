@@ -285,37 +285,38 @@ void chain<T>::hebing(){
     }
     C.print();
 }
+//#include "shiyan3.h"
 
-int main(){
-    chain<int>  *mychain;
-    mychain= new chain<int>[100];
-    cout << "Input sum of your nodelist:" << endl;
-    int num = 0;
-    int value=0,forvalue,result;
-    cin >> num;
-    cout << "现在输入元素值吧~" << endl;
-    for (int i = 0; i < num; i++){
-        cin >> value;
-        mychain->insert(i, value);
-    }
-    mychain->print();
-    int yuansu;
-    cout << "输入要删除的元素" << endl;
-    cin >> yuansu;
-    mychain->shanchu(yuansu);
-    mychain->print();
-    
-        mychain->reverseprint();
-        cout << endl;
-        cout << "input thevalue ~" << endl;
-    
-        cin >> forvalue;
-        result=mychain->indexOf(forvalue);
-        cout << result << endl;
-        cout << endl;
-        mychain->hebing();
-    return 0;
-}
+//int main(){
+//    chain<int>  *mychain;
+//    mychain= new chain<int>[100];
+//    cout << "Input sum of your nodelist:" << endl;
+//    int num = 0;
+//    int value=0,forvalue,result;
+//    cin >> num;
+//    cout << "现在输入元素值吧~" << endl;
+//    for (int i = 0; i < num; i++){
+//        cin >> value;
+//        mychain->insert(i, value);
+//    }
+//    mychain->print();
+//    int yuansu;
+//    cout << "输入要删除的元素" << endl;
+//    cin >> yuansu;
+//    mychain->shanchu(yuansu);
+//    mychain->print();
+//    
+//        mychain->reverseprint();
+//        cout << endl;
+//        cout << "input thevalue ~" << endl;
+//    
+//        cin >> forvalue;
+//        result=mychain->indexOf(forvalue);
+//        cout << result << endl;
+//        cout << endl;
+//        mychain->hebing();
+//    return 0;
+//}
 
 
 

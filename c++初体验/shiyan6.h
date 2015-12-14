@@ -451,27 +451,3 @@ void ct(BinaryTreeNode<T> *t)
 //    
 //}
 
-template<class T>
-bool BinaryTree<T>::compareTree(BinaryTree<T> *X )
-{
-    return compareTree(root, X->root);
-}
-
-template<class T>
-bool BinaryTree<T>::compareTree(BinaryTreeNode<T> *x1, BinaryTreeNode<T> *x2)
-{
-    static int count =0;
-    if (x1 && x2) {
-        compareTree(x1->LeftChild, x2->LeftChild);
-        compareTree(x1->RightChild, x2->RightChild);
-        if (x1->data == x2->data) {
-            
-            count++;
-        }else
-            return false;
-        if (count == xulieSize) {
-            return true;
-        }
-    }
-    return false;
-}

@@ -33,7 +33,7 @@ public:
     void Initialize(T a[], int size, int ArraySize);
     void Output();
     
-//private:
+
     int CurrentSize, MaxSize;
     T *heap; //  元素数组
 };
@@ -162,7 +162,7 @@ void MaxHeap<T>::Initialize(T a[], int size, int ArraySize)
             if (c < CurrentSize && heap[c] < heap[c+1]) {
                 c++;
             }
-//            能把 y 放入heap[c/2]吗？
+//            把 y 放入heap[c/2]
             if (y >= heap[c]) {
                 break;              //  能
             }
@@ -348,7 +348,7 @@ void MinHeap<T>::Initialize(T a[], int size, int ArraySize)
             if (c < CurrentSize && heap[c].weight > heap[c+1].weight) {
                 c++;
             }
-            //            能把 y 放入heap[c/2]吗？
+            //            把 y 放入heap[c/2]
             if (y.weight <= heap[c].weight) {
                 break;              //  能
             }
@@ -507,7 +507,7 @@ BSTree<T>& BSTree<T>::Insert(const T& t)
     
     while (p) {
         pp = p;
-        if (t < p->data) {
+        if (t <= p->data) {
             p = p->LeftChild;
         }
         else if (t > p->data)
@@ -531,7 +531,7 @@ BSTree<T>& BSTree<T>::Insert(const T& t)
     return *this;
 }
 
-//  MARK:  实验七main方法
+//  MARK:  实验6main方法
 
 //#include "shiyan7.h"
 //
